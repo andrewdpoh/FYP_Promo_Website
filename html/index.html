@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Bamboo</title>
+    <!-- JQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../images/favicon.png?" />
+    <!-- Animate On Scroll -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/home.css" />
+
+    <!-- For appearOnHover.js to work -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <!---------------------- NAVBAR ---------------------->
+    <nav class="navbar navbar-expand-sm fixed-top">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Logo -->
+      <a class="navbar-brand" href="index.html">
+        <img src="../images/bamboo_icon.png" alt="" />
+      </a>
+      <span class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="active">
+            <button
+              class="navButton"
+              onclick="window.location.href='./index.html'"
+              type="button"
+            >
+              HOME
+            </button>
+          </li>
+          <li>
+            <button
+              class="navButton"
+              onclick="window.location.href='./tool.html'"
+              type="button"
+            >
+              TOOL
+            </button>
+          </li>
+          <li>
+            <button
+              class="navButton"
+              onclick="window.location.href='./testbed.html'"
+              type="button"
+            >
+              TESTBED
+            </button>
+          </li>
+          <li>
+            <button
+              class="navButton"
+              onclick="window.location.href='./resources.html'"
+              type="button"
+            >
+              RESOURCES
+            </button>
+          </li>
+        </ul>
+      </span>
+    </nav>
+
+    <!------------------------ MAIN BODY ----------------------->
+
+    <!-- HEADER --->
+    <div class="header">
+      <div class="d-flex" id="headerText">
+        <img
+          data-aos="fade-down"
+          data-aos-duration="1300"
+          src="../images/bamboo_icon.png"
+          alt=""
+        />
+        <h1 data-aos="fade-right" data-aos-duration="1000">BAMBOO</h1>
+      </div>
+
+      <div class="headerBackground">
+        <img
+          id="bgColor"
+          src="../images/bamboo_ink_objects/bgColor.jpg"
+          alt=""
+        />
+        <img
+          id="headerHill"
+          src="../images/bamboo_ink_objects/hill.png"
+          alt=""
+        />
+        <img
+          id="headerBranch"
+          src="../images/bamboo_ink_objects/branch.png"
+          alt=""
+        />
+        <img
+          id="headerLeaves"
+          src="../images/bamboo_ink_objects/leaves.png"
+          alt=""
+        />
+      </div>
+    </div>
+
+    <!-- BODY -->
+    <div class="body">
+      <div class="container-fluid">
+        <div class="row whatIsBamboo">
+          <div
+            class="col-5 pt-5 whatIsBambooText"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+          >
+            <h2>What is Bamboo?</h2>
+            <p>
+              Bamboo is a Command-and-Control (C2) Framework that applies tested
+              evasion techniques to exploits, allowing your attacks to bypass
+              detection from Elastic Stack.
+            </p>
+            <button
+              onclick="window.location.href='./tool.html'"
+              type="button"
+              class="btn btn-outline-light col-6"
+            >
+              View Tool
+            </button>
+          </div>
+          <div class="col d-flex">
+            <img src="../images/white.jpg" class="mx-auto img-fluid" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="hslant"></div>
+
+      <div class="features container-fluid">
+        <div class="row">
+          <h1>Features</h1>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <div class="row">
+              <img src="../images/evasion.png" alt="" />
+            </div>
+            <div class="row">
+              <h4>Evasion</h4>
+              <p>3 undetected shellcode injection techniques and an EDR blinding tool</p>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="row">
+              <img src="../images/exploit.png" alt="" />
+            </div>
+            <div class="row">
+              <h4>Exploits</h4>
+              <p>
+                5 pre-loaded exploits to test, along with the option to
+                add your own
+              </p>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="row">
+              <img src="../images/post_exploitation.png" alt="" />
+            </div>
+            <div class="row">
+              <h4>Post-Exploitation</h4>
+              <p>2 useful post-exploitation tools which evade detection</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <div class="row">
+              <img src="../images/management.png" alt="" />
+            </div>
+            <div class="row">
+              <h4>User & Agent Management</h4>
+              <p>
+                Users and agents can be added and removed with ease using the
+                GUI
+              </p>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="row">
+              <img src="../images/quick_operation.png" alt="" />
+            </div>
+            <div class="row">
+              <h4>Quick & Simple Operation</h4>
+              <p>
+                Add your exploits, start the agent and use any one of Bamboo's
+                evasion techniques with ease
+              </p>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="row">
+              <img src="../images/encrypted.png" alt="" />
+            </div>
+            <div class="row">
+              <h4>Encrypted Communication</h4>
+              <p>
+                Communication between Teamserver and Agent are via HTTPS and Websocket Secure
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid projectScope text-center">
+        <div class="row pb-3" data-aos="fade-down" data-aos-duration="1000">
+          <h1>Project Scope</h1>
+        </div>
+
+        <div class="row pt-5" data-aos="fade-right" data-aos-duration="1000">
+          <div class="col-sm-3"></div>
+          <div class="col">
+            <h2>Problem Statement</h2>
+            <p>
+              The widespread use of powerful threat detection tools such as
+              SIEMs and EDRs forces penetration testers to invest significant
+              time and effort into discovering and implementing evasion
+              techniques to bypass detection rules, prolonging the testing
+              process.
+            </p>
+          </div>
+          <div class="col-sm-3"></div>
+        </div>
+
+        <div class="row pt-4" data-aos="fade-left" data-aos-duration="1000">
+          <div class="col-sm-3"></div>
+          <div class="col">
+            <h2>Solution</h2>
+            <p>
+              A <b>tool</b> that contains <b>evasion techniques</b> which allow
+              penetration testers to perform attacks while evading detection
+              from the Elastic Stack.
+            </p>
+          </div>
+          <div class="col-sm-3"></div>
+        </div>
+
+        <div class="row pt-4" data-aos="fade-in" data-aos-duration="1000">
+          <div class="col-sm-1"></div>
+          <div class="col">
+            <h2>Assumptions</h2>
+            <table class="table mt-3">
+              <thead>
+                <tr>
+                  <th scope="col">Item</th>
+                  <th scope="col">Description</th>
+                  <th scope="col">Reason</th>
+                </tr>
+              </thead>
+              <tbody class="text-start">
+                <tr>
+                  <th scope="row">Target OS</th>
+                  <td>Windows 11</td>
+                  <td>
+                    This is the latest version of the Windows OS which is
+                    commonly used in enterprises
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">Detection to Evade</th>
+                  <td>
+                    The Elastic Stack (Basic License) will be used. The Elastic
+                    Endpoint Defender will also replace Windows Defender as the
+                    target's AV
+                  </td>
+                  <td>
+                    The Elastic Stack is widely used by enterprises to collect
+                    logs and detect threats due to its open-source and
+                    cost-effective options. The Basic License will be used due
+                    to budget constraints.
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">Type of Exploits</th>
+                  <td>
+                    Local Privilege Escalation (LPE) exploits for Third-party
+                    applications
+                  </td>
+                  <td>
+                    The project scope is for single-host exploitation, thus the
+                    most valuable exploits are LPEs. We also only target
+                    third-party applications as they are less likely to be
+                    automatically patched than Windows vulnerabilities.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-sm-1"></div>
+        </div>
+      </div>
+
+      <div
+        class="container-fluid meetTheTeam text-center pt-5"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
+        <div class="col-12">
+          <h1>Meet the Team</h1>
+          <div class="row teamImages mt-3">
+            <img src="../images/alden.jpg" class="col-md g-0" alt="" />
+            <img src="../images/genghao.jpg" class="col-md g-0" alt="" />
+            <img src="../images/cassandra.jpg" class="col-md g-0" alt="" />
+            <img src="../images/andrew.jpg" class="col-md g-0" alt="" />
+            <img src="../images/angelica.jpg" class="col-md g-0" alt="" />
+          </div>
+          <div class="row mt-2">
+            <p class="col">
+              <b>Alden</b> <br />
+              Team Leader
+            </p>
+            <p class="col">
+              <b>Geng Hao</b> <br />
+              Asst. Team Leader
+            </p>
+            <p class="col">
+              <b>Cassandra</b> <br />
+              Cloud Architect
+            </p>
+            <p class="col">
+              <b>Andrew</b> <br />
+              Exploit Specialist
+            </p>
+            <p class="col">
+              <b>Angelica</b> <br />
+              UI/UX Lead
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid sponsorSupervisor text-center">
+        <div class="row pb-3" data-aos="fade-up" data-aos-duration="1000">
+          <div class="col-12">
+            <h2>Sponsor</h2>
+            <img src="../images/DSO.png" alt="" />
+            <p>Mr. Yap</p>
+          </div>
+        </div>
+        <div class="row pt-5" data-aos="fade-up" data-aos-duration="1000">
+          <div class="col-12">
+            <h2>Supervisor</h2>
+            <img src="../images/SP.png" alt="" />
+            <p>Mr. Samson</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!------------------------ FOOTER ----------------------->
+    <footer class="container-fluid">
+      <div class="row m-auto">
+        <div class="col">
+          <h1>BAMBOO</h1>
+          <h2>An Elastic Evasion Tool</h2>
+        </div>
+        <div class="col">
+          <ul class="d-flex justify-content-end mr-3">
+            <li>
+              <a href="https://github.com/time0ut07/c2-agent" target="_blank"
+                ><img src="../images/github.png" alt="" class="socialicon"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <!-------------------- My Scripts -------------------->
+    <script src="../scripts/navbarTransparent.js" defer></script>
+    <script src="../scripts/parallax_scroll.js"></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

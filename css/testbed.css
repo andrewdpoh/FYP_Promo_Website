@@ -1,0 +1,44 @@
+.testbedNetwork{
+	background-color: #15151d;
+	padding-top:6rem;
+	padding-bottom:7rem;
+	color:white;
+
+}
+.testbedNetwork img{
+	height: 20rem;
+}
+.testbedNetwork h1{
+	margin-bottom:2rem;
+}
+
+.testbedNetworkExplanation{
+	margin-top:4rem;
+	margin-left:22vw;
+	margin-bottom:4rem;
+}
+.testbedNetworkExplanation p{
+	font-size:1rem;
+}
+.testbedNetworkExplanation img{
+	height:5rem;
+	margin-top:2rem;
+}
+
+.elastic{
+	padding-top:6rem;
+	padding-left:11rem;
+	padding-right:11rem;
+	padding-bottom:9rem;
+	background-color:#15151d;
+	color:white;
+}
+.elastic .row{
+	margin-top:1rem;
+}
+.elasticHeader h1{
+	text-align:center;
+}
+.elasticHeader p{
+	text-align:justify;
+}

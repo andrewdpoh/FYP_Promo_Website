@@ -1,0 +1,150 @@
+@charset "utf-8";
+
+.content {
+  color: white;
+}
+/* Special Navbar Settings (so it can be transparent at top) */
+nav {
+  background-color: rgba(255, 255, 255, 0);
+}
+.navButton {
+  color: black;
+}
+
+/* HEADER */
+.header {
+  /* background: url("../images/bamboo_ink.jpg"); */
+  /* background: url("../images/bamboo_ink_objects/background.jpg"); */
+  /* background-size: 79rem; */
+  height: 36rem;
+  font-size: 10rem;
+  position: relative;
+  display: flex;
+}
+#headerText {
+  padding-top: 12.5rem;
+  padding-left: 7.5rem;
+  position: absolute;
+}
+#headerText h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  font-size: 7.5rem;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: #15151d;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
+}
+#headerText img {
+  height: 13rem;
+  margin-right: -5.2rem;
+  margin-top: -2.3rem;
+  z-index: -1;
+}
+.headerBackground img {
+  position: absolute;
+  width: 79rem;
+}
+#headerHill {
+  margin-top: -3.3rem;
+}
+#bgColor {
+  z-index: -2;
+}
+header .bold {
+  font-weight: 800;
+}
+
+/* BODY */
+.body {
+  background: white;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.hslant {
+  height: 6rem;
+  background: #15151d;
+  transform: skewY(3deg);
+  margin-top: -3rem;
+}
+
+.whatIsBamboo {
+  background: #15151d;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  color: white;
+}
+.whatIsBambooText {
+  padding-left: 3.5rem;
+}
+.whatIsBamboo img {
+  height: 20rem;
+  width: 35rem;
+}
+
+.features {
+  margin-top: 8rem;
+  margin-bottom: 4rem;
+  text-align: center;
+	padding-left:8rem;
+	padding-right:8rem;
+}
+.features h1 {
+	margin-bottom:3rem;
+}
+.features img {
+  width: 4.5rem;
+  margin: auto;
+	margin-bottom:1rem;
+}
+.features p {
+  font-size: 1rem;
+}
+.features .col{
+	padding-left:3rem;
+	padding-right:3rem;
+}
+
+.projectScope {
+  padding-top: 10rem;
+  padding-bottom: 5rem;
+	margin-bottom:5rem;
+  background-color: #15151d;
+  color: white;
+}
+.projectScope div {
+  justify-content: center;
+}
+.projectScope td,
+.projectScope th {
+  color: white;
+  font-size: 1rem;
+}
+
+.meetTheTeam .teamImages {
+  background-color: black;
+}
+.meetTheTeam img {
+  width: 10rem;
+}
+.meetTheTeam img:hover {
+  transform: scale(1.02);
+  transition: all, 0.1s;
+  opacity: 0.8;
+}
+.meetTheTeam p b {
+  font-size: 1.2rem;
+}
+.meetTheTeam p {
+  font-size: 1rem;
+  text-align: left;
+}
+
+.sponsorSupervisor {
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
+.sponsorSupervisor img {
+  height: 8rem;
+  padding-bottom: 1rem;
+}

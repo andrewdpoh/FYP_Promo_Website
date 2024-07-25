@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>BAMBOO</title>
+    <!-- JQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../images/bamboo_icon.png" />
+    <!-- Animate On Scroll -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/tool.css" />
+  </head>
+
+  <body>
+    <!---------------------- NAVBAR ---------------------->
+    <nav class="navbar navbar-expand-sm fixed-top">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Logo -->
+      <a class="navbar-brand" href="index.html">
+        <img src="../images/bamboo_icon.png" alt="" />
+      </a>
+      <span class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li>
+            <button
+              class="navButton"
+              onclick="window.location.href='./index.html'"
+              type="button"
+            >
+              HOME
+            </button>
+          </li>
+          <li class="active">
+            <button
+              class="navButton"
+              onclick="window.location.href='./tool.html'"
+              type="button"
+            >
+              TOOL
+            </button>
+          </li>
+          <li>
+            <button
+              class="navButton"
+              onclick="window.location.href='./testbed.html'"
+              type="button"
+            >
+              TESTBED
+            </button>
+          </li>
+          <li>
+            <button
+              class="navButton"
+              onclick="window.location.href='./resources.html'"
+              type="button"
+            >
+              RESOURCES
+            </button>
+          </li>
+        </ul>
+      </span>
+    </nav>
+
+    <!------------------------ MAIN BODY ----------------------->
+    <!-- <header class="container-fluid d-flex">
+      <h1 class="mx-auto">THE TOOL</h1>
+    </header> -->
+
+    <div class="container-fluid overview">
+      <div class="row titleCards">
+        <div class="col d-flex">
+          <div
+            class="card d-flex mx-auto"
+            data-aos="fade-left"
+            data-aos-duration="1000"
+          >
+            <img
+              class="card-img-top mx-auto"
+              src="../images/controller.png"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Handler</h5>
+              <p class="card-text">
+                A graphical user interface which allows you to interact with the
+                teamserver
+              </p>
+              <button
+                class="btn btn-primary"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#handlerViewMore"
+                aria-expanded="false"
+                aria-controls="handlerViewMore"
+              >
+                View more
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col d-flex">
+          <div
+            class="card d-flex mx-auto"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            <img
+              class="card-img-top mx-auto"
+              src="../images/server.png"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Teamserver</h5>
+              <p class="card-text">
+                Processes commands from the handler and sends instructions to
+                the agent
+              </p>
+              <button
+                class="btn btn-primary"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#teamserverViewMore"
+                aria-expanded="false"
+                aria-controls="teamserverViewMore"
+              >
+                View more
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col d-flex">
+          <div
+            class="card d-flex mx-auto"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+          >
+            <img
+              class="card-img-top mx-auto"
+              src="../images/bug.png"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Agent</h5>
+              <p class="card-text">
+                Installed on a target machine to perform the teamserver's
+                instructions
+              </p>
+              <button
+                class="btn btn-primary"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#agentViewMore"
+                aria-expanded="false"
+                aria-controls="agentViewMore"
+              >
+                View more
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="viewMoreCards">
+        <div class="col d-flex">
+          <div class="collapse mx-auto" id="handlerViewMore">
+            <h5 class="card-title">Handler</h5>
+            <div class="card card-body">
+              <p>
+                The interface which you use to send instructions to the
+                Teamserver. It offers an easy-to-use interface which allows
+                users to manage Agents, Users and Exploits. This is where users
+                can add their own exploits to Bamboo. It also contains a
+                terminal for the user to type commands, as well as a Team Chat
+                function which allows you to talk with your other handlers.
+                <br /><br />
+                The Handler was designed in Python using CustomTkinter.
+              </p>
+              <div class="iconsDiv">
+                <img src="../images/python.png" alt="Python icon" />
+                <img src="../images/customtkinter.png" alt="Tkinter icon" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col d-flex">
+          <div class="collapse mx-auto" id="teamserverViewMore">
+            <h5 class="card-title">Teamserver</h5>
+            <div class="card card-body">
+              <p>
+                The controller that facilitates communication between Handler
+                and Agent. It receives instructions from the Handler, processes
+                them and delivers the necessary information to the Agent. The
+                server uses HTTPS for majority of its communications, with some
+                exceptions of WebSocket communication.
+                <br /><br />
+                The Teamserver houses the exploit files and maintains a database
+                of exploits. If exploit shellcode is required, shellcode
+                generation is performed here using the amazing
+                <a href="https://github.com/TheWover/donut">Donut</a> created by
+                TheWover. <br /><br />
+                The Teamserver was developed in Python with Flask as the
+                framework for the APIs and MongoDB as its database.
+              </p>
+              <div class="iconsDiv">
+                <img src="../images/donut.jpg" alt="Donut icon" />
+                <img src="../images/python.png" alt="Python icon" />
+                <img src="../images/flask.jpg" alt="Flask icon" />
+                <img src="../images/mongoDB.jpg" alt="MongoDB icon" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col d-flex">
+          <div class="collapse mx-auto" id="agentViewMore">
+            <h5 class="card-title">Agent</h5>
+            <div class="card card-body">
+              <p>
+                The implant that is installed on the target machine and performs
+                actions on the machine. The Agent contains various shellcode
+                injection techniques which are used to evade detection. These
+                techniques are further described below.
+                <br /><br />
+                The Agent was developed using Golang.
+              </p>
+              <div class="iconsDiv">
+                <img src="../images/golang.svg" alt="Golang icon" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Flowchart Video -->
+    <div class="flowchart container-fluid">
+      <h3>Example interaction between Handler, Teamserver and Agent</h3>
+      <video autoplay loop muted>
+        <source src="../images/flowchart.mp4" type="video/mp4" />
+      </video>
+    </div>
+
+    <!-- Evasion and Exploits -->
+    <div class="evasionAndExploits container-fluid">
+      <div class="row exploits">
+        <div class="col blackHalf">
+          <div>
+            <h2>Exploits</h2>
+            <p>
+              Bamboo contains some pre-loaded exploits for you to try. These
+              exploits are primarily for unpatched versions of third-party
+              applications. Bamboo also allows you to add your own exploits,
+              keeping it flexible. Details on the mechanism of each exploit can
+              be found in our report.
+            </p>
+          </div>
+        </div>
+
+        <div class="col whiteHalf">
+          <div
+            class="accordion accordion-flush row"
+            id="exploitsAccordionParent"
+          >
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="exploitsAccordionHeadingOne">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#exploitCollapseOne"
+                  aria-expanded="false"
+                  aria-controls="exploitCollapseOne"
+                >
+                  CVE-2023-32162 | Wacom Driver
+                </button>
+              </h2>
+              <div
+                id="exploitCollapseOne"
+                class="accordion-collapse collapse"
+                aria-labelledby="exploitsAccordionHeadingOne"
+                data-bs-parent="#exploitsAccordionParent"
+              >
+                <div class="accordion-body">
+                  Wacom specialises in pen displays and tablets for designers.
+                  Many of their products require the Wacom Driver to be
+                  installed in the system. The driver can be found on their
+                  <a
+                    href="https://www.wacom.com/en-en/support/product-support/drivers"
+                    >website</a
+                  >. Several vulnerabilities in the Wacom Driver 6.3.45-1 were
+                  discovered by
+                  <a href="https://github.com/LucaBarile/ZDI-CAN-16318"
+                    >Luca Barile</a
+                  >: an Arbitrary File Read Vulnerability, Arbitrary File
+                  Read/Write Vulnerability and a Local Privilege Escalation
+                  Vulnerability. Of these vulnerabilities, Bamboo has
+                  implemented the exploit for Local Privilege Escalation with
+                  some modifications made. This abuses the Remove.exe process
+                  which runs with SYSTEM context and an arbitrary file write
+                  primitive to inject code for the Remove.exe process to
+                  execute. All credit goes to the original author Luca Barile
+                  for discovering these vulnerabilities and creating the
+                  original PoC. The writeup can be found on
+                  <a
+                    href="https://lucabarile.github.io/Blog/ZDI-CAN-16318/lpe/index.html"
+                    >Luca Barile's blog</a
+                  >.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="exploitsAccordionHeadingOne">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#exploitCollapseTwo"
+                  aria-expanded="false"
+                  aria-controls="exploitCollapseTwo"
+                >
+                  CVE-2020-23834 | BarracudaDrive
+                </button>
+              </h2>
+              <div
+                id="exploitCollapseTwo"
+                class="accordion-collapse collapse"
+                aria-labelledby="exploitsAccordionHeadingTwo"
+                data-bs-parent="#exploitsAccordionParent"
+              >
+                <div class="accordion-body">
+                  BarracudaDrive is a web-based file explorer that provides
+                  users with a convenient way to access and manage files on
+                  local machines or network-attached storage devices. This
+                  application features file sharing, file management, advanced
+                  server side scripting language and collaboration capabilities.
+                  It was discovered by
+                  <a href="https://www.exploit-db.com/exploits/48789"
+                    >Bobby Cooke and Adeeb Shah</a
+                  >
+                  that BarracudaDrive v6.5 contains a vulnerability that enables
+                  a low-privileged attacker to gain SYSTEM privileges by
+                  restarting the local machine, or an attacker with admin
+                  privileges to achieve the same by restarting the application's
+                  service using <code>sc.exe</code>. This vulnerability is due
+                  to insecure folder permissions that allow the replacement of
+                  the bd.exe file which is located at <code>C:\bd\bd.exe</code>.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="exploitsAccordionHeadingThree">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#exploitCollapseThree"
+                  aria-expanded="false"
+                  aria-controls="exploitCollapseThree"
+                >
+                  CVE-2023-31747 | Wondershare Filmora
+                </button>
+              </h2>
+              <div
+                id="exploitCollapseThree"
+                class="accordion-collapse collapse"
+                aria-labelledby="exploitsAccordionHeadingThree"
+                data-bs-parent="#exploitsAccordionParent"
+              >
+                <div class="accordion-body">
+                  Filmora is a video editor by Wondershare. The specific
+                  vulnerable component is NativePush (Build 1.0.0.7), which
+                  contains an unquoted service path. The intended executable to
+                  run is located at
+                  <code
+                    >C:\Users\[user]\AppData\Local\Wondershare\Wondershare
+                    NativePush\NativePushService.exe</code
+                  >. This is a service that runs with SYSTEM context. However,
+                  attackers can place their payload at
+                  <code
+                    >C:\Users\[user]\AppData\Local\Wondershare\Wondershare.exe</code
+                  >
+                  so that the payload is executed instead of the actual service
+                  executable. This executes the payload with SYSTEM context
+                  whenever the service is run, which can be achieved using
+                  <code>sc.exe</code>. Running the service requires
+                  administrator privileges. The vulnerability was authored by
+                  <a href="https://www.exploit-db.com/exploits/51483"
+                    >Thurein Soe</a
+                  >.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="exploitsAccordionHeadingFour">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#exploitCollapseFour"
+                  aria-expanded="false"
+                  aria-controls="exploitCollapseFour"
+                >
+                  CVE-2021-44596 | Wondershare DrFone
+                </button>
+              </h2>
+              <div
+                id="exploitCollapseFour"
+                class="accordion-collapse collapse"
+                aria-labelledby="exploitsAccordionHeadingFour"
+                data-bs-parent="#exploitsAccordionParent"
+              >
+                <div class="accordion-body">
+                  WonderShare Dr. Fone is a desktop application to handle phone
+                  management, with features such as screen unlock and data
+                  recovery. Dr. Fone installs these features as modules, which
+                  uses the service InstallAssistService to actually install it.
+                  The service listens on a random UDP port defined in the file
+                  <code>C:\ProgramData\Wondershare\ModuleUpgrade\port</code>.
+                  The vulnerability discovered by
+                  <a href="https://www.exploit-db.com/exploits/50912"
+                    >Peled and Cohen</a
+                  >
+                  is due to InstallAssistService accepting any requests to it in
+                  the right format as commands without any form of authorization
+                  or validation and executes them at up to SYSTEM privilege.
+                  This CVE is given a rating of Critical since it allows system
+                  access of a host remotely.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="exploitsAccordionHeadingFive">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#exploitCollapseFive"
+                  aria-expanded="false"
+                  aria-controls="exploitCollapseFive"
+                >
+                  CVE-2023-28252 | Windows CLFS
+                </button>
+              </h2>
+              <div
+                id="exploitCollapseFive"
+                class="accordion-collapse collapse"
+                aria-labelledby="exploitsAccordionHeadingFive"
+                data-bs-parent="#exploitsAccordionParent"
+              >
+                <div class="accordion-body">
+                  The Windows Common Log File System (CLFS) is a high
+                  performing, general-purpose logging system that helps
+                  applications keep track of important events and recover from
+                  failures. It is a crucial component of many Windows
+                  applications, including messaging, database systems, network
+                  events logging and threat analysis. A critical vulnerability
+                  was discovered in CLFS that could allow a malicious
+                  low-privileged attacker to gain SYSTEM privileges on a system.
+                  This vulnerability exists due to an out of bound read and
+                  write flaw, leading to the execution of arbitrary code. The
+                  specific Windows 11 builds affected by this vulnerability are:
+                  Windows 11 22H1 (fixed in version 10.0.22000.1817) Windows 11
+                  22H2 (fixed in version 10.0.22621.1555)
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="exploitsAccordionHeadingSix">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#exploitCollapseSix"
+                  aria-expanded="false"
+                  aria-controls="exploitCollapseSix"
+                >
+                  UAC Bypass
+                </button>
+              </h2>
+              <div
+                id="exploitCollapseSix"
+                class="accordion-collapse collapse"
+                aria-labelledby="exploitsAccordionHeadingSix"
+                data-bs-parent="#exploitsAccordionParent"
+              >
+                <div class="accordion-body">
+                  While not similar to the exploits above, UAC bypassing is
+                  necessary to execute exploits that require elevated privilege.
+                  <br /><br />
+                  User Account Control (UAC) is a security feature in Windows
+                  which requires any application that requires administrator
+                  privileges to prompt the user for consent before executing the
+                  application with administrator privileges. If the user is in
+                  the Administrators group, the prompt will have “Yes” and “No”
+                  options. If the user is a normal user, the prompt will request
+                  for an administrator's username and password.
+                  <br /><br />
+                  Certain exploits require admin privileges to be successful. In
+                  Bamboo, exploits that require admin privileges to work are the
+                  Wondershare Filmora and BarracudaDrive exploits. When either
+                  of these exploits are run, even by a user in the
+                  Administrators group, it prompts the end user for consent.
+                  However, you are only able to click “Yes” if you have access
+                  to the computer's GUI. This means that remote attackers are
+                  unable to launch any exploits that require admin privileges.
+                  <br /><br />
+                  In order to circumvent UAC, a UAC bypass is required. This
+                  refers to a method that skips the UAC prompt and allows an
+                  application to run with admin privileges without needing to
+                  give consent. There are many methods to perform UAC bypassing.
+                  Bamboo uses a method that relies on computerdefaults.exe to
+                  perform UAC bypasses for its exploits.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row evasion">
+        <div class="col whiteHalf">
+          <div
+            class="accordion accordion-flush row"
+            id="evasionAccordionParent"
+          >
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="evasionAccordionHeadingOne">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#evasionCollapseOne"
+                  aria-expanded="false"
+                  aria-controls="evasionCollapseOne"
+                >
+                  Virtual Allocation
+                </button>
+              </h2>
+              <div
+                id="evasionCollapseOne"
+                class="accordion-collapse collapse"
+                aria-labelledby="evasionAccordionHeadingOne"
+                data-bs-parent="#evasionAccordionParent"
+              >
+                <div class="accordion-body">
+                  Virtual Allocation injection is a technique used to inject
+                  shellcode into memory. As this method of injection uses
+                  VirtualAlloc, it allocates and injects shellcode into the
+                  memory of its own process.
+									<br><br>
+									Through testing, it appears that
+                  Elastic Defend does not detect malware running in memory, as
+                  long as the shellcode was not hardcoded into the injection
+                  program and detected as a file on the disk. Hence, an
+                  injection program retrieving the shellcode from another source
+                  (such as a http server) and performing the injection will
+                  evade malware detection, as long as the exploit does not
+                  perform other actions that trigger other Elastic rules.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="evasionAccordionHeadingTwo">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#evasionCollapseTwo"
+                  aria-expanded="false"
+                  aria-controls="evasionCollapseTwo"
+                >
+                  Process Injection
+                </button>
+              </h2>
+              <div
+                id="evasionCollapseTwo"
+                class="accordion-collapse collapse"
+                aria-labelledby="evasionAccordionHeadingTwo"
+                data-bs-parent="#evasionAccordionParent"
+              >
+                <div class="accordion-body">
+                  Remote Process Injection, also called Vanilla Process
+                  Injection, is a shellcode injection technique that injects the
+                  shellcode into the memory of another process (ARZ101, 2022).
+                  Unlike the Virtual Allocation Injection technique earlier,
+                  this technique used VirtualAllocEx rather than VirtualAlloc,
+                  which allocates memory in another process instead of the local
+                  process. 
+									<br><br>
+									There are advantages to injecting the exploit into
+                  another process over injecting it in the local process. If the
+                  exploit is too large or consumes too much memory, this will
+                  cause the remote process to exit rather than the agent itself.
+                  Running the shellcode in another process also allows the
+                  exploit to use any whitelisting the detection tools uses on
+                  the injected process, such as the elastic prebuilt rule
+                  Component Model Hijacking, which ignores processes such as
+                  OneDrive.exe which it considers noisy and would set off false
+                  alerts.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="evasionAccordionHeadingThree">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#evasionCollapseThree"
+                  aria-expanded="false"
+                  aria-controls="evasionCollapseThree"
+                >
+                  NtQueueApcThreadEx NTDLL Gadget Injection
+                </button>
+              </h2>
+              <div
+                id="evasionCollapseThree"
+                class="accordion-collapse collapse"
+                aria-labelledby="evasionAccordionHeadingThree"
+                data-bs-parent="#evasionAccordionParent"
+              >
+                <div class="accordion-body">
+                  This is a novel shellcode injection method first used by
+                  Roshtyak, the DLL backdoor used by the malware Raspberry
+                  Robin. This was adapted into a C program and published on
+                  github by
+                  <a
+                    href="https://github.com/LloydLabs/ntqueueapcthreadex-ntdll-gadget-injection"
+                    >LloydLabs</a
+                  >, which is the original code Bamboo uses for its
+                  NtQueueApcThreadEx NTDLL Gadget Injection. 
+									<br><br>
+									A brief overview of
+                  this technique involves allocating shellcode into the current
+                  process memory and pointing the SystemArgument parameter of
+                  NtQueueApcThreadEx() to the shellcode address, then abusing
+                  the ApcRoutine parameter of NtQueueApcThreadEx() by pointing
+                  it to a random NTDLL gadget that meets the requirements of
+                  <code>pop r32; ret</code>, where r32 refers to any 32-bit
+                  general purpose register. This then returns into the
+                  SystemArgument parameter which executes the shellcode.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="evasionAccordionHeadingFour">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#evasionCollapseFour"
+                  aria-expanded="false"
+                  aria-controls="evasionCollapseFour"
+                >
+                  EDRSilencer
+                </button>
+              </h2>
+              <div
+                id="evasionCollapseFour"
+                class="accordion-collapse collapse"
+                aria-labelledby="evasionAccordionHeadingFour"
+                data-bs-parent="#evasionAccordionParent"
+              >
+                <div class="accordion-body">
+                  EDRSilencer, created by
+                  <a href="https://github.com/netero1010/EDRSilencer"
+                    >netero1010</a
+                  >
+                  is an open-source evasion tool designed for disrupting
+                  Endpoint Detection and Response (EDR) systems. It leverages
+                  Windows Filtering Platform (WFP) APIs, which allows a program
+                  developer to create network filtering software that can
+                  examine, modify and stop network traffic. The WFP consists of
+                  APIs and system services that enable fine-grained analysis and
+                  modification of network packets, control over network flow,
+                  and interface with the Windows Firewall. This feature is
+                  essential for applications like VPNs, firewalls, and EDR
+                  tools. 
+									<br><br>
+									The WPF-based EDRSilencer uses the WFP to prevent EDR
+                  agents and processes from connecting and reporting security
+                  events with their servers, effectively disabling the EDR's
+                  threat detection capabilities of the EDR. Inspired by MdSec
+                  NightHawk's closed-source FireBlock tool, which also utilises
+                  WFP APIs to block EDR processes, EDRSilencer provides similar
+                  functionality in an open-source package. The tool currently
+                  supports Elastic EDR, among other popular EDR solutions.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col blackHalf">
+          <div>
+            <h2>Evasion</h2>
+            <p>
+              The primary forms of evasion in Bamboo are shellcode injection
+              techniques. This works because Elastic Stack (Basic License) lacks
+              in-memory detection, allowing us to perform malicious actions
+              undetected. However, take note that these
+              <b>only work for evading Elastic's Malware Detection Alert</b>.
+              For more information, please see the section below on Further
+              Evasion. We also found a tool that can blind Elastic EDR.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="furtherEvasion container-fluid">
+      <h1 class="row">Further Evasion</h1>
+      <div class="row">
+        <p>
+          Bamboo's evasion techniques have certain limitations when used against
+          against Elastic's detection rules. To understand why, we must first
+          understand the types of detection rules in Elastic.
+          <br />
+          <br />
+          Elastic (Basic License) has 2 types of detection rules available:
+          <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. Pre-built Detection Rules
+          <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. Malware Detection Rules
+          <br /><br />
+          Bamboo enables exploits to <b>evade the Malware Detection Rules</b>,
+          but <b>not the Pre-built Detection Rules</b> (with the exception of
+          EDRSilencer, which blinds the EDR entirely). <br /><br />
+          There is no single way to evade the Pre-built Detection Rules as
+          evading these rules
+          <b
+            >requires the original exploit code to be tweaked specifically to
+            evade certain gaps in the rule</b
+          >. However, these Pre-built rules are also easier for pentesters to
+          evade if they pentester first tests their exploits against Elastic in
+          a testbed. This is because the detection alert specifies exactly what
+          events the rule is looking for, allowing pentesters to modify their
+          exploit to evade that specific detection rule. On the other hand,
+          Malware Detection Rules do not specify what behaviours triggered the
+          alert other than the name of the process, making it harder for
+          pentesters to modify exploits to evade these rules. Furthermore,
+          during our testing, most exploits generated Malware Detection Alerts
+          but not Pre-built rule alerts (including msfvenom shellcode and
+          metasploit activity). As such, pentesters will likely struggle more
+          with evading the Malware Detection Rules than Pre-built detection
+          rules, and Bamboo can help with that. <br /><br />
+          The team acknowledges that the Pre-built Detection Rules are still a
+          threat. To help with that, we have included some of the Pre-built
+          Detection Rules that pentesters are more likely to run into in the
+          section below, as well as methods we have created to evade them.
+          <br /><br />
+          Because our tool is not able to evade 100% of Elastic's rules, we
+          strongly suggest that you test the tool in your own testbed with
+          Elastic to check if your exploit generates any alerts from the
+          Pre-built rules so that you can make the necessary changes to your
+          exploit in order to safely and fully evade detection.
+        </p>
+
+        <h2>Common Pre-Built Detection Rule Alerts & How to Evade Them</h2>
+        <table class="table mt-3">
+          <thead>
+            <tr>
+              <th scope="col">Rule Name</th>
+              <th scope="col">Description</th>
+              <th scope="col">Evasion Strategy</th>
+            </tr>
+          </thead>
+          <tbody class="text-start">
+            <tr>
+              <th scope="row">Component Model Hijacking</th>
+              <td>Detects if modifications are made to registry keys</td>
+              <td>
+                Run your exploit using Bamboo's Process Injection evasion
+                technique, injecting into OneDrive.exe. This works as the rule
+                has exceptions for certain "noisy processes" which perform a lot
+                of registry activity, one of which is OneDrive. Bamboo utilises
+                this strategy for our UAC Bypass.
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                Service Control Spawned via Script Interpreter
+              </th>
+              <td>
+                Identifies Service Control (sc.exe) spawning from script
+                interpreter processes to create, modify, or start services.
+              </td>
+              <td>
+                Modify your exploit to execute sc.exe directly from the exploit
+                process. For example, in Golang, use the Command function from
+                the os/exec library (exec.Command()). Or in Python, use the
+                system function from the os library (os.system()). Other
+                programming languages have their counterparts to this as well.
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">Whoami Process Activity</th>
+              <td>
+                Identifies suspicious use of whoami.exe which displays user,
+                group, and privileges information for the user who is currently
+                logged on to the local system.
+              </td>
+              <td>
+                The rule only detects if a process with SYSTEM integrity level
+                runs <code>whoami</code>. If you want to verify if your process
+                has attained SYSTEM integrity level, instead of running
+                <code>whoami</code>, modify your exploit to use
+                <code>tasklist /v /fo csv | findstr [pid]</code> where [pid] is
+                your process ID and check if the "user" column states "NT
+                AUTHORITY\\SYSTEM". This method is used in our Agent to check
+                for successful escalation to SYSTEM.
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                Credential Acquisition via Registry Hive Dumping
+              </th>
+              <td>
+                Identifies attempts to export a registry hive which may contain
+                credentials using the Windows reg.exe tool.
+              </td>
+              <td>
+                Only the usage of <code>reg.exe</code> triggers this alert. To
+                evade this rule, modify your exploit to instead use wmic to
+                create a new shadow copy, list available shadow copies and used
+                the 'copy' command to copy it from the latest
+                HarddiskVolumeShadowCopy.
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">NTDS or SAM Database File Copied</th>
+              <td>
+                Identifies a copy operation of the Active Directory Domain
+                Database (ntds.dit) or Security Account Manager (SAM) files.
+                Those files contain sensitive information including hashed
+                domain and/or local credentials.
+              </td>
+              <td>
+                This alert is triggered when processes like
+                <code>cmd.exe</code>, <code>powershell.exe</code> and
+                <code>xcopy.exe</code> are used to copy the database. Thus,
+                modify your exploit to use a function/library that allows you to
+                directly to open and copy files. For example, Golang has the os
+                and io packages (e.g. io.open).
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">Process Execution from an Unusual Directory</th>
+              <td>
+                Identifies process execution from suspicious default Windows
+                directories. This is sometimes done by adversaries to hide
+                malware in trusted paths.
+              </td>
+              <td>
+                Modify your exploit to execute files from an alternative
+                directory. A directory all Windows computers will have that is
+                not detected by the rule is the user's home directory (e.g.
+                C:\Users\[username]).
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="howEvasionTechWorks">
+      <div>
+        <h1 data-aos="fade-in" data-aos-duration="1000">
+          A deeper dive into Bamboo's evasion techniques
+        </h1>
+
+        <div data-aos="fade-in" data-aos-duration="1000">
+          <h2>Virtual Allocation</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Necessitatibus sapiente perferendis, amet odio in odit dolore est
+            libero, ullam quibusdam nemo porro voluptatibus voluptatem sequi.
+            Voluptatibus in autem quo assumenda.
+          </p>
+        </div>
+        <div data-aos="fade-in" data-aos-duration="1000">
+          <h2>Process Injection</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Necessitatibus sapiente perferendis, amet odio in odit dolore est
+            libero, ullam quibusdam nemo porro voluptatibus voluptatem sequi.
+            Voluptatibus in autem quo assumenda.
+          </p>
+        </div>
+        <div data-aos="fade-in" data-aos-duration="1000">
+          <h2>NtQueueApcThreadEx NTDLL Gadget Injection</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Necessitatibus sapiente perferendis, amet odio in odit dolore est
+            libero, ullam quibusdam nemo porro voluptatibus voluptatem sequi.
+            Voluptatibus in autem quo assumenda.
+          </p>
+        </div>
+        <div data-aos="fade-in" data-aos-duration="1000">
+          <h2>EDRSilencer</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Necessitatibus sapiente perferendis, amet odio in odit dolore est
+            libero, ullam quibusdam nemo porro voluptatibus voluptatem sequi.
+            Voluptatibus in autem quo assumenda.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------------ FOOTER ----------------------->
+    <footer class="container-fluid">
+      <div class="row m-auto">
+        <div class="col">
+          <h1>BAMBOO</h1>
+          <h2>An Elastic Evasion Tool</h2>
+        </div>
+        <div class="col">
+          <ul class="d-flex justify-content-end mr-3">
+            <li>
+              <a href="https://github.com/time0ut07/c2-agent" target="_blank"
+                ><img src="../images/github.png" alt="" class="socialicon"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <!-------------------- My Scripts -------------------->
+    <script src="../scripts/navbar.js" defer></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

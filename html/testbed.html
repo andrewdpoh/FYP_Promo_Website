@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>BAMBOO</title>
+    <!-- JQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../images/bamboo_icon.png" />
+    <!-- Animate On Scroll -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/testbed.css" />
+  </head>
+
+  <body>
+    <!---------------------- NAVBAR ---------------------->
+    <nav class="navbar navbar-expand-sm fixed-top">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Logo -->
+      <a class="navbar-brand" href="index.html">
+        <img src="../images/bamboo_icon.png" alt="" />
+      </a>
+      <span class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="active">
+            <button
+              class="navButton"
+              onclick="window.location.href='./index.html'"
+              type="button"
+            >
+              HOME
+            </button>
+          </li>
+          <li>
+            <button
+              class="navButton"
+              onclick="window.location.href='./tool.html'"
+              type="button"
+            >
+              TOOL
+            </button>
+          </li>
+          <li>
+            <button
+              class="navButton"
+              onclick="window.location.href='./testbed.html'"
+              type="button"
+            >
+              TESTBED
+            </button>
+          </li>
+          <li>
+            <button
+              class="navButton"
+              onclick="window.location.href='./resources.html'"
+              type="button"
+            >
+              RESOURCES
+            </button>
+          </li>
+        </ul>
+      </span>
+    </nav>
+
+    <!------------------------ MAIN BODY ----------------------->
+    <!-- <header class="container-fluid d-flex">
+      <h1 class="mx-auto">TESTBED</h1>
+    </header> -->
+    <div class="container-fluid testbedNetwork text-center">
+      <h1>Testbed Network Setup</h1>
+      <img src="../images/testbed.png" class="img-fluid" alt="" />
+    </div>
+
+    <div class="container testbedNetworkExplanation">
+      <div class="row">
+        <div class="col-6" data-aos="fade-right" data-aos-duration="1000">
+          <h4>RHEL Linux</h4>
+          <p>
+            Hosts the Elastic Stack. It collects logs using the Elastic Agent
+            installed in the Windows 11 hosts. The configurations of the Elastic
+            Stack are explained below.
+          </p>
+        </div>
+        <div class="col-6" data-aos="fade-up" data-aos-duration="1000">
+          <img src="../images/elastic.png" alt="" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-6" data-aos="fade-right" data-aos-duration="1000">
+          <h4>Windows 11 (A & B)</h4>
+          <p>
+            Simulates the victim host. It has the Elastic Agent installed which
+            allows the Elastic Stack to monitor activity on the victim computer.
+            It also has the Bamboo agent which, when launched, allows for the
+            teamserver to give it instructions.
+          </p>
+        </div>
+        <div class="col-6" data-aos="fade-up" data-aos-duration="1000">
+          <img src="../images/windows11_logo.png" alt="" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-6" data-aos="fade-right" data-aos-duration="1000">
+          <h4>Kali Linux</h4>
+          <p>
+            Simulates the Teamserver host as well as the attacker's machine.
+            While the teamserver and handler can be placed in different
+            machines, this setup just saves the need for an additional VM.
+          </p>
+        </div>
+        <div class="col-6" data-aos="fade-up" data-aos-duration="1000">
+          <img src="../images/kali_logo.png" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid elastic">
+      <div class="elasticHeader row">
+        <h1>Elastic Configurations</h1>
+        <p class="mt-4">
+          The Elastic Stack, also known as the ELK Stack, is a platform
+          comprised of Elasticsearch, Kibana, Beats and Logstash. It enables
+          users to take data from many sources and formats to perform searching,
+          analysing and visualisation of data in real time. For more
+          information, visit
+          <a href="https://www.elastic.co/elastic-stack">Elastic's website</a>.
+          In this project, we primarily focus on Elastic Security which is a
+          feature of the Elastic Stack. Elastic Security combines Security
+          Information and Event Management (SIEM) threat detection features with
+          Endpoint Detection and Repsonse (EDR) capabilities into one solution.
+          Below briefly explains the configurations we put in place in our
+          Elastic setup.
+        </p>
+      </div>
+
+      <div class="row">
+        <h3>Policies</h3>
+        <p>
+          A policy was created which was applied to all Elastic Agents. There is
+          1 agent installed on Windows 11A and another in Windows 11B. Policies
+          allows for configurations such as integrations and rules to be applied
+          to all the Agents at once. We also enabled the Malware Protection
+          setting in this policy.
+        </p>
+      </div>
+      <div class="row">
+        <h3>Integrations</h3>
+        <p>
+          <b>Elastic Defend Integration:</b> Provides prevention, detection and
+          response capabilities on the host machine. This allows for deep
+          visibility into the host and quick response from the Elastic Stack.
+          <br />
+          <b>Windows Integration:</b> Allows for the monitoring of the Windows
+          OS, services, applications and more. It helps in the collection of
+          metrics and logs from the host machine.
+        </p>
+      </div>
+      <div class="row">
+        <h3>Rules</h3>
+        <p>
+          <b>Pre-built Detection Rules:</b> Enabled all pre-built detection
+          rules with the "os:Windows" tag and updated the rule-schedule to run
+          every 1 minute. The repository for these rules can be found
+          <a href="https://github.com/elastic/detection-rules">on GitHub</a>.
+          <br />
+          <b>Malware Detection Rules:</b> These rules are part of the Malware
+          Protection setting in the agent policy. The repository for these rules
+          can also be found
+          <a href="https://github.com/elastic/protections-artifacts"
+            >on GitHub</a
+          >.
+        </p>
+      </div>
+    </div>
+
+    <!------------------------ FOOTER ----------------------->
+    <footer class="container-fluid">
+      <div class="row m-auto">
+        <div class="col">
+          <h1>BAMBOO</h1>
+          <h2>An Elastic Evasion Tool</h2>
+        </div>
+        <div class="col">
+          <ul class="d-flex justify-content-end mr-3">
+            <li>
+              <a href="https://github.com/time0ut07/c2-agent" target="_blank"
+                ><img src="../images/github.png" alt="" class="socialicon"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <!-------------------- My Scripts -------------------->
+    <script src="../scripts/navbar.js" defer></script>
+    <script src="../scripts/parallax_scroll.js"></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

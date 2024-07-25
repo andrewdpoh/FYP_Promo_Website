@@ -1,0 +1,125 @@
+@charset "utf-8";
+
+@charset "UTF-8";
+
+/* reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  background: transparent;
+  transition: none;
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+
+/* body properties */
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+  overflow-x: hidden;
+}
+
+/* Text Styles */
+h1 {
+  font-family: "Raleway", sans-serif;
+  font-size: 4rem;
+  font-weight: 500;
+}
+h2 {
+  font-family: "Raleway", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+h3 {
+  font-family: "Raleway", sans-serif;
+}
+p,
+thead,
+tbody {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+li {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+/* header {
+	background-color: #15151d;
+  height: 17rem;
+} */
+header h1 {
+  margin-top: 8rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+	color:white;
+}
+
+/* -------------------------Navbar------------------------- */
+nav {
+  transition: top 0.3s;
+  z-index: 2;
+  height: 4rem;
+  font-weight: 600;
+  background-color: black;
+}
+.navbar-brand img {
+  height:2.5rem;
+  padding-left: 1rem;
+	padding-right: 0.2rem;
+}
+.navbar-brand img:hover{
+	transform: scale(1.05);
+  transition: all 0.1s;
+}
+nav li {
+  font-size: 1rem;
+}
+
+nav li button {
+  padding-right: 1rem;
+	color:rgb(255, 255, 255);
+}
+nav li button:focus {
+  outline: none !important; /*remove outline of button when clicked*/
+}
+nav li button:hover {
+  transform: scale(1.05);
+  transition: all 0.1s;
+  text-decoration: underline;
+}
+/*-------------------------Footer-------------------------*/
+footer {
+  height: 8rem;
+  background-color: black;
+  color: white;
+  font-weight: 200;
+}
+footer h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2rem;
+  padding-left: 3rem;
+  padding-top: 2rem;
+}
+footer h2 {
+  font-size: 1rem;
+  font-weight: 100;
+  padding-left: 3rem;
+}
+footer ul {
+  padding-top: 2rem;
+}
+.socialicon {
+  float: left;
+  height: 2.4rem;
+  transition: all 0.1s ease-in-out;
+  margin: 0.5rem;
+}
+.socialicon:hover {
+  transform: scale(1.15);
+}
