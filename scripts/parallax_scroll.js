@@ -13,13 +13,13 @@ window.addEventListener("scroll", () => {
 
   text.style.marginTop = value * 1 + "px";
 
-  hill.style.right = value * 0.7 + "px";
+  hill.style.left = value * -0.7 + "px";
 
   leaves.style.top = value * -0.4 + "px";
-  leaves.style.left = value * 0.4 + "px";
+  leaves.style.right = value * -0.4 + "px";
 
   branch.style.top = value * -0.5 + "px";
-  branch.style.left = value * 0.7 + "px";
+  branch.style.right = value * -0.7 + "px";
 
   // hide the Bamboo text afterwards
   if (value >= 280) {
