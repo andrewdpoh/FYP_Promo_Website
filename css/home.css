@@ -18,7 +18,7 @@ nav {
   font-size: 10rem;
   position: relative;
   display: flex;
-	z-index:-2;
+  z-index:-2;
 }
 #headerText {
   padding-top: 12.5rem;
@@ -46,10 +46,10 @@ nav {
 }
 #headerHill {
   margin-top: -3.3rem;
-	left:0;
+  left:0;
 }
 #headerLeaves, #headerBranch{
-	right:0;
+  right:0;
 }
 #bgColor {
   z-index: -2;
