@@ -1,38 +1,38 @@
 .resources{
-	padding-top:8rem;
-	padding-bottom:4rem;
+	padding-top:22.8vh;
+	padding-bottom:11.4vh;
 	background-color:#15151d;
 }
 .resources .row{
-	padding-left:14rem;
-	padding-right:14rem;
+	padding-left:40vh;
+	padding-right:40vh;
 }
 
 .resources img{
-	height:5rem;
-	width:5rem;
+	height:14.25rem;
+	width:14.25rem;
 }
 .resources .card {
   /* note that .card is a bootstrap class. This styling adds on to it */
-  width: 18rem;
-  height: 20rem;
-  margin: 3rem 1rem 3rem 1rem;
+  width: 51vh;
+  height: 57vh;
+  margin: 8.55vh 2.85vh 8.55vh 2.85vh;
   border: 2px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.5rem;
 }
 .resources .card img {
-  height: 6rem;
-  width: 6rem;
-  margin-top: 1rem;
+  height: 17vh;
+  width: 17vh;
+  margin-top: 2.85vh;
 }
 .resources h5 {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
-  font-size: 1.8rem;
+  font-size: 5vh;
 }
 .resources p,
 .resources button {
   font-family: "Raleway", sans-serif;
-  font-size: 1rem;
+  font-size: 2.85vh;
   font-weight: 400;
 }

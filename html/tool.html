@@ -621,7 +621,7 @@
                   aria-expanded="false"
                   aria-controls="evasionCollapseTwo"
                 >
-                  Process Injection
+                  Remote Process Injection
                 </button>
               </h2>
               <div
@@ -786,7 +786,7 @@
             >requires the original exploit code to be tweaked specifically to
             evade certain gaps in the rule</b
           >. However, these Pre-built rules are also easier for pentesters to
-          evade if they pentester first tests their exploits against Elastic in
+          evade if the pentester first tests their exploits against Elastic in
           a testbed. This is because the detection alert specifies exactly what
           events the rule is looking for, allowing pentesters to modify their
           exploit to evade that specific detection rule. On the other hand,
@@ -824,7 +824,7 @@
               <th scope="row">Component Model Hijacking</th>
               <td>Detects if modifications are made to registry keys</td>
               <td>
-                Run your exploit using Bamboo's Process Injection evasion
+                Run your exploit using Bamboo's Remote Process Injection evasion
                 technique, injecting into OneDrive.exe. This works as the rule
                 has exceptions for certain "noisy processes" which perform a lot
                 of registry activity, one of which is OneDrive. Bamboo utilises
@@ -875,8 +875,8 @@
               </td>
               <td>
                 Only the usage of <code>reg.exe</code> triggers this alert. To
-                evade this rule, modify your exploit to instead use wmic to
-                create a new shadow copy, list available shadow copies and used
+                evade this rule, modify your exploit to instead use WMIC to
+                create a new shadow copy, list available shadow copies and use
                 the 'copy' command to copy it from the latest
                 HarddiskVolumeShadowCopy.
               </td>
@@ -894,7 +894,7 @@
                 <code>cmd.exe</code>, <code>powershell.exe</code> and
                 <code>xcopy.exe</code> are used to copy the database. Thus,
                 modify your exploit to use a function/library that allows you to
-                directly to open and copy files. For example, Golang has the os
+                directly open and copy files. For example, Golang has the os
                 and io packages (e.g. io.open).
               </td>
             </tr>
@@ -926,37 +926,63 @@
         <div data-aos="fade-in" data-aos-duration="1000">
           <h2>Virtual Allocation</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Necessitatibus sapiente perferendis, amet odio in odit dolore est
-            libero, ullam quibusdam nemo porro voluptatibus voluptatem sequi.
-            Voluptatibus in autem quo assumenda.
+            This shellcode injection technique uses VirtualAlloc to reserve space to inject the shellcode inside the process.
+            The shellcode is then into the reserved space using RtlCopyMemory.
+            VirtualProtect is then called to change the protection on the injected space to allow execution.
+            Using CreateThread, a new thread is created in the process which executes the shellcode in the injected space.
+            WaitForSingleObject is used to wait for the thread to finish. 
+            <br><br>
+            In Bamboo, this technique is implemented using a the Go package <b>go-inject</b>, 
+            created by <a href="https://github.com/zaneGittins/go-inject">zaneGittins</a>
           </p>
         </div>
         <div data-aos="fade-in" data-aos-duration="1000">
-          <h2>Process Injection</h2>
+          <h2>Remote Process Injection</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Necessitatibus sapiente perferendis, amet odio in odit dolore est
-            libero, ullam quibusdam nemo porro voluptatibus voluptatem sequi.
-            Voluptatibus in autem quo assumenda.
+            This shellcode injection technique first requires a target process. The PID of this target process is first obtained.
+            Next, OpenProcess is called to get a handle for the process to inject into.
+            VirtualAllocEx is used then to allocate space for the shellcode in the remote process
+            and the shellcode is written into the allocated space using WriteProcessMemory. 
+            Create a thread in the remote process with CreateRemoteThread to run the allocated space, then
+            close the handle to the process with CloseHandle.
+            <br><br>
+            Bamboo performs remote process injection on a fixed target process: OneDrive.exe. From the team's testing,
+            this is the best process to inject into for two reasons: (a) OneDrive.exe is whitelisted in Elastic's Component Model Hijacking rule, allowing any exploits that modify registry keys
+            (e.g. Bamboo's UAC Bypass) to go undetected; (b) OneDrive.exe is reliable as it runs on startup. Even if it is not run, it exists on most Windows systems and thus
+            can be executed so it spawns a OneDrive.exe process.
+              </li>
+            </ul>
+
           </p>
         </div>
         <div data-aos="fade-in" data-aos-duration="1000">
           <h2>NtQueueApcThreadEx NTDLL Gadget Injection</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Necessitatibus sapiente perferendis, amet odio in odit dolore est
-            libero, ullam quibusdam nemo porro voluptatibus voluptatem sequi.
-            Voluptatibus in autem quo assumenda.
+            This is a shhellcode injection technique. NtQueueApcThreadEx is a function from the Win32 API which adds a user-mde asynchronous procedure call (APC) object to the APC queue of a specified thread (Pinvoke, 2022). The function takes in several parameters, but the parameters of interest for this injection technique are ApcRoutine, SystemArgument1, SystemArgument2 and SystemArgument3
+            <br><br>
+            The technique first allocates shellcode into the memory of the current process. Next,
+            code sections of the current process' ntdll.dll are scanned for a <code>pop r32; ret</code> gadget and one of these gadgets are picked at random.
+            “r32” refers to a 32-bit general-purpose register such as eax, ebc, ecx etc. Thus, an example gadget that would meet this requirement is <code>pop ebp; ret</code>.
+            An exception is the gadget <code>pop esp; ret</code> because this would pivot the stack.
+            <br><br>
+            NtQueueApcThreadEx is then called with the ApcRoutine parameter set to the address of the random gadget found in step 2 (pop r32; ret) and SystemArgument1 as the pointer to the shellcode allocated.
+            Because of how ApcRoutine works, when ApcRoutine is set to the gadget, the pop r32 instruction will make the stack pointer point to SystemArgument1. 
+            The ret instruction will thus make the Instruction Pointer jump to the location that SystemArgument1 points to, which is the location of the allocated shellcode. This executes the shellcode.
           </p>
         </div>
         <div data-aos="fade-in" data-aos-duration="1000">
           <h2>EDRSilencer</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Necessitatibus sapiente perferendis, amet odio in odit dolore est
-            libero, ullam quibusdam nemo porro voluptatibus voluptatem sequi.
-            Voluptatibus in autem quo assumenda.
+            EDRSilencer compromises the effectiveness of EDR systems by blocking the outbound traffic of running EDR processes.
+            <br><br><b>Hardcoded EDR Processes</b><br>
+            EDRSilencer contains a hardcoded list of possible EDR process names, which includes popular EDR solutions such as Elastic EDR, Microsoft Defender for Endpoint, SentinelOne and others. 
+            <br><br><b>Scanning EDR Processes</b><br>
+            Using the list of hardcoded EDR process names, EDRSilencer scans for running EDR processes on the host to identify these specific EDR-related executables. Once the EDR processes have been identified, it will then open a handle to each EDR process using the 'OpenProcess' API. This allows EDRSilencer to gain access to the EDR process's memory and resources, enabling it to manipulate the process's behaviour and ultimately block its outbound traffic.
+            <br><br><b>WFP Filter Creation</b><br>
+            EDRSilencer creates a WFP filter and condition using the filter layer called '_FWPM_LAYER_ALE_AUTH_CONNECT_V4_', which allows for authorising connect requests for outgoing TCP connections, as well as authorising outgoing non-TCP traffic based on the first packet sent. These filters are persistent and the classification action is set to block outbound network traffic from the identified EDR processes. By doing this, EDRSilencer effectively isolates the EDR agents, preventing them from communicating with their central servers and thereby disabling their ability to report threat reports and alerts. 
+            <br><br><b>Adding WFP Filters to IPv4 and IPv6 Layers</b><br>
+            EDRSilencer adds a WFP provider for the filter using 'FwpmProviderAdd0', which registers the provider with the WFP system, enabling it to block outbound traffic from EDR processes. It then adds the filter to both IPv4 and IPv6 layers. EDRSilencer establishes these WFP filters in a way that persists through system reboots and updates. This makes it more challenging for security tools and analysts to detect its presence.
+
           </p>
         </div>
       </div>

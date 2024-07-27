@@ -1,67 +1,74 @@
 /* Section: Top cards */
 .overview {
-  /* height: 40rem; */
-	padding-top:6rem;
-  padding-left: 7rem;
-  padding-right: 7rem;
+	padding-top: 17vh;
+  padding-left: 20vh;
+  padding-right: 20vh;
   background-color: #15151d;
 }
 .overview .titleCards .card {
   /* note that .card is a bootstrap class. This styling adds on to it */
-  width: 16rem;
-  height: 20.5rem;
-  margin: 3rem 1rem 3rem 1rem;
+  width: 45vh;
+  height: 58vh;
+  margin: 8.55vh 2.85vh 8.55vh 2.85vh;
   border: 2px solid rgba(0, 0, 0, 0.125);
-  border-radius: 0.5rem;
+  border-radius: 1.5vh;
 }
 .overview .titleCards .card img {
-  height: 6rem;
-  width: 6rem;
-  margin-top: 1rem;
+  height: 17vh;
+  width: 17vh;
+  margin-top: 3vh;
+  margin-bottom:3vh;
 }
 .overview .titleCards h5 {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
-  font-size: 1.8rem;
+  font-size: 5vh;
 }
 .overview .titleCards p,
 .overview .titleCards button {
   font-family: "Raleway", sans-serif;
-  font-size: 1rem;
+  font-size: 2.5vh;
   font-weight: 400;
 }
 .overview .viewMoreCards {
-  padding-bottom: 3rem;
+  padding-bottom: 8.5vh;
 	font-family:'Josefin Sans', sans-serif;
 }
 .viewMoreCards .card {
-  width: 50rem;
-  margin-bottom: 1rem;
+  width: 150vh;
+  margin-bottom: 3vh;
 }
 .viewMoreCards h5 {
   color: white;
+  font-size:5vh;
+}
+.viewMoreCards p {
+  font-size:2.8vh;
+  padding-left:3vh;
+  padding-right:3vh;
+  padding-top:3vh;
 }
 .viewMoreCards .iconsDiv{
 	display:flex;
 	justify-content:center;
-	margin-top:1rem;
-	margin-bottom:2rem;
+	margin-top:3vh;
+	margin-bottom:6vh;
 	flex-wrap: wrap;
 }
 .viewMoreCards .iconsDiv img{
-	height:6rem;
+	height:17vh;
 }
 /* Flowchart */
 .flowchart {
   background-color: white;
 	text-align: center;
-	padding-top:4rem;
+	padding-top:11.5vh;
 }
 .flowchart video {
-  height: 33rem;
+  height: 94vh;
   margin: auto;
-  padding-top: 1rem;
-  padding-bottom: 6rem;
+  padding-top: 3vh;
+  padding-bottom: 17vh;
 }
 
 /* Section: Evasion and Exploits */
@@ -71,55 +78,56 @@
   color: white;
   display: flex;
   align-items: center;
-  padding-top: 1rem;
+  padding-top: 3vh;
 }
 .whiteHalf {
   display: flex;
   align-items: center;
-  margin-top: 5rem;
-  margin-bottom: 5rem;
+  margin-top: 14vh;
+  margin-bottom: 14vh;
 }
 .blackHalf div {
-  padding-left: 2rem;
-  padding-right: 4rem;
+  padding-left: 6vh;
+  padding-right: 11.5vh;
 }
 .whiteHalf button{
 	font-family:monospace;
+  font-size:3vh;
 }
- .whiteHalf div{
-	font-family:monospace;
-	font-size:0.9rem;
- }
+.whiteHalf div{
+  font-family:monospace;
+  font-size:2.5vh;
+}
 .accordion {
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 2.9vh;
+  padding-right: 2.9vh;
 }
 
 .furtherEvasion{
 	background-color:#15151d;
 	color:white;
-	padding:6rem 13rem 6rem 13rem;
+	padding: 17vh 37vh 17vh 37vh;
 }
 .furtherEvasion h1{
 	display:block;
 	text-align:center;
-	margin-bottom:2rem;
+	margin-bottom: 6vh;
 }
 .furtherEvasion div{
   text-align: justify;
   text-justify: inter-word;
 }
 .furtherEvasion p{
-	font-size:1.1rem;
+	font-size: 3vh;
 }
 .furtherEvasion h2{
 	display:block;
 	text-align:center;
-	margin-top:5rem;
-	margin-bottom:2rem;
+	margin-top: 14vh;
+	margin-bottom: 6vh;
 }
 .furtherEvasion td{
-	font-size:1rem;
+	font-size: 3vh;
 }
 .furtherEvasion table{
 	color:white;
@@ -127,19 +135,23 @@
 
 /* Section: How do the evasion techniques work */
 .howEvasionTechWorks {
-	margin-top:7rem;
-  padding-bottom: 10rem;
+	margin-top: 20vh;
+  padding-bottom: 28.5vh;
 }
 .howEvasionTechWorks div {
-  padding-left: 10rem;
-  padding-right: 10rem;
+  padding-left: 15vh;
+  padding-right: 15vh;
 }
-.howEvasionTechWorks h1,
-.howEvasionTechWorks h2,
-.howEvasionTechWorks p {
+.howEvasionTechWorks h1 {
   text-align: center;
+  margin-bottom: 11.5vh;
 }
-.howEvasionTechWorks h1,
+.howEvasionTechWorks h2{
+  text-align: center;
+  margin-bottom: 3vh;
+}
 .howEvasionTechWorks p {
-  margin-bottom: 4rem;
+  text-align: justify;
+  text-justify: inter-word;
+  margin-bottom: 11.5vh;
 }

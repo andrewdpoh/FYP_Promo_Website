@@ -1,44 +1,50 @@
 .testbedNetwork{
 	background-color: #15151d;
-	padding-top:6rem;
-	padding-bottom:7rem;
+	padding-top:15.5vh;
+	padding-bottom:18vh;
 	color:white;
 
 }
 .testbedNetwork img{
-	height: 20rem;
+	height:51vh;
 }
 .testbedNetwork h1{
-	margin-bottom:2rem;
+	margin-bottom:5vh;
 }
 
 .testbedNetworkExplanation{
-	margin-top:4rem;
-	margin-left:22vw;
-	margin-bottom:4rem;
+	margin-top:10vh;
+	margin-left:50vh;
+	margin-bottom:10vh;
+}
+.testbedNetworkExplanation h4 {
+	font-size:5vh;
 }
 .testbedNetworkExplanation p{
-	font-size:1rem;
+	font-size:3vh;
 }
 .testbedNetworkExplanation img{
-	height:5rem;
-	margin-top:2rem;
+	height:13vh;
+	margin-top:5vh;
 }
 
 .elastic{
-	padding-top:6rem;
-	padding-left:11rem;
-	padding-right:11rem;
-	padding-bottom:9rem;
+	padding-top:15.5vh;
+	padding-left:28vh;
+	padding-right:28vh;
+	padding-bottom:23vh;
 	background-color:#15151d;
 	color:white;
 }
 .elastic .row{
-	margin-top:1rem;
+	margin-top:2.8vh;
 }
 .elasticHeader h1{
 	text-align:center;
 }
 .elasticHeader p{
 	text-align:justify;
+}
+.elastic h3{
+	font-size:5vh;
 }
