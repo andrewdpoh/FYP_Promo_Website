@@ -53,7 +53,7 @@ header h1 {
   margin-top: 22.8vh;
   font-family: "Raleway", sans-serif;
   font-weight: 800;
-	color:white;
+  color: white;
 }
 
 /* -------------------------Navbar------------------------- */
@@ -67,10 +67,10 @@ nav {
 .navbar-brand img {
   height: 6vh;
   padding-left: 2.85vh;
-	padding-right: 0.5vh;
+  padding-right: 0.5vh;
 }
-.navbar-brand img:hover{
-	transform: scale(1.05);
+.navbar-brand img:hover {
+  transform: scale(1.05);
   transition: all 0.1s;
 }
 nav li {
@@ -79,7 +79,7 @@ nav li {
 
 nav li button {
   padding-right: 2.85vh;
-	color:rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
 }
 nav li button:focus {
   outline: none !important; /*remove outline of button when clicked*/

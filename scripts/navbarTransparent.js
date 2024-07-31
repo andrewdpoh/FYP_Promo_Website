@@ -1,5 +1,5 @@
 // make navbar disappear and reappear on scroll AND make navbar transparent/black after passing scrollY 200 (need the background-color css in main.css also)
-// 
+//
 var prevScrollpos = window.scrollY;
 var navButton = document.getElementsByClassName("navButton");
 var navButtonArr = Array.from(navButton);
@@ -14,7 +14,7 @@ window.onscroll = function () {
   }
   prevScrollpos = currentScrollPos;
 
-	if (currentScrollPos >= 350) {
+  if (currentScrollPos >= 350) {
     nav.style["background-color"] = "black";
     navButtonArr.forEach((button) => {
       button.style.color = "white";

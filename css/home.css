@@ -17,7 +17,7 @@ nav {
   height: 100vh;
   position: relative;
   display: flex;
-  z-index:-2;
+  z-index: -2;
 }
 #headerText {
   padding-top: 35vh;
@@ -44,14 +44,14 @@ nav {
   width: 229vh;
 }
 #headerHill {
-  left:0;
+  left: 0;
 }
-#headerLeaves{
-  right:0;
+#headerLeaves {
+  right: 0;
 }
-#headerBranch{
-  right:0;
-  margin-right:-10vh;
+#headerBranch {
+  right: 0;
+  margin-right: -10vh;
 }
 #bgColor {
   z-index: -2;
@@ -82,15 +82,15 @@ header .bold {
 .whatIsBambooText {
   padding-left: 10vh;
 }
-.whatIsBambooText h2{
+.whatIsBambooText h2 {
   font-size: 8vh;
 }
-.whatIsBambooText p, .whatIsBambooText button{
+.whatIsBambooText p,
+.whatIsBambooText button {
   font-size: 3vh;
 }
 .whatIsBamboo img {
-  height: 50vh;
-  width: 100vh;
+  height: 60vh;
 }
 .features {
   margin-top: 22.8vh;
@@ -128,7 +128,10 @@ header .bold {
 .projectScope td,
 .projectScope th {
   color: white;
-  font-size: 2.85vh;
+  font-size: 2.7vh;
+}
+.projectScope p {
+  font-size: 2.7vh;
 }
 
 .meetTheTeam .teamImages {

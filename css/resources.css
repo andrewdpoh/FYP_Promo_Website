@@ -1,16 +1,16 @@
-.resources{
-	padding-top:22.8vh;
-	padding-bottom:11.4vh;
-	background-color:#15151d;
+.resources {
+  padding-top: 22.8vh;
+  padding-bottom: 11.4vh;
+  background-color: #15151d;
 }
-.resources .row{
-	padding-left:40vh;
-	padding-right:40vh;
+.resources .row {
+  padding-left: 40vh;
+  padding-right: 40vh;
 }
 
-.resources img{
-	height:14.25rem;
-	width:14.25rem;
+.resources img {
+  height: 14.25rem;
+  width: 14.25rem;
 }
 .resources .card {
   /* note that .card is a bootstrap class. This styling adds on to it */

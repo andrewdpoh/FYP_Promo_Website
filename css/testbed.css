@@ -1,50 +1,52 @@
-.testbedNetwork{
-	background-color: #15151d;
-	padding-top:15.5vh;
-	padding-bottom:18vh;
-	color:white;
+.testbedNetwork {
+  background-color: #15151d;
+  padding-top: 15.5vh;
+  padding-bottom: 18vh;
+  color: white;
+}
+.testbedNetwork img {
+  height: 51vh;
+}
+.testbedNetwork h1 {
+  margin-bottom: 5vh;
+}
 
-}
-.testbedNetwork img{
-	height:51vh;
-}
-.testbedNetwork h1{
-	margin-bottom:5vh;
-}
-
-.testbedNetworkExplanation{
-	margin-top:10vh;
-	margin-left:50vh;
-	margin-bottom:10vh;
+.testbedNetworkExplanation {
+  margin-top: 10vh;
+  margin-left: 50vh;
+  margin-bottom: 10vh;
 }
 .testbedNetworkExplanation h4 {
-	font-size:5vh;
+  font-size: 5vh;
 }
-.testbedNetworkExplanation p{
-	font-size:3vh;
+.testbedNetworkExplanation p {
+  font-size: 2.7vh;
 }
-.testbedNetworkExplanation img{
-	height:13vh;
-	margin-top:5vh;
+.testbedNetworkExplanation img {
+  height: 13vh;
+  margin-top: 5vh;
 }
 
-.elastic{
-	padding-top:15.5vh;
-	padding-left:28vh;
-	padding-right:28vh;
-	padding-bottom:23vh;
-	background-color:#15151d;
-	color:white;
+.elastic {
+  padding-top: 15.5vh;
+  padding-left: 28vh;
+  padding-right: 28vh;
+  padding-bottom: 23vh;
+  background-color: #15151d;
+  color: white;
 }
-.elastic .row{
-	margin-top:2.8vh;
+.elastic .row {
+  margin-top: 2.8vh;
 }
-.elasticHeader h1{
-	text-align:center;
+.elasticHeader h1 {
+  text-align: center;
 }
-.elasticHeader p{
-	text-align:justify;
+.elasticHeader p {
+  text-align: justify;
 }
-.elastic h3{
-	font-size:5vh;
+.elastic h3 {
+  font-size: 5vh;
+}
+.elastic p {
+  font-size: 2.7vh;
 }

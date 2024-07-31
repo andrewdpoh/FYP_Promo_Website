@@ -20,5 +20,4 @@ window.addEventListener("scroll", () => {
 
   branch.style.top = value * -0.5 + "px";
   branch.style.right = value * -0.7 + "px";
-
 });

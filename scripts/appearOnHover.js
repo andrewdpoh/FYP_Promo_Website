@@ -1,6 +1,5 @@
 $(".myImg").mouseover(function () {
   $(".myText").css("visibility", "visible");
-
 });
 
 $(".myImg").mouseout(function () {

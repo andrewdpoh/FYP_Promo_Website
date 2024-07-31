@@ -1,6 +1,6 @@
 /* Section: Top cards */
 .overview {
-	padding-top: 17vh;
+  padding-top: 17vh;
   padding-left: 20vh;
   padding-right: 20vh;
   background-color: #15151d;
@@ -17,7 +17,7 @@
   height: 17vh;
   width: 17vh;
   margin-top: 3vh;
-  margin-bottom:3vh;
+  margin-bottom: 3vh;
 }
 .overview .titleCards h5 {
   font-family: "Raleway", sans-serif;
@@ -32,7 +32,7 @@
 }
 .overview .viewMoreCards {
   padding-bottom: 8.5vh;
-	font-family:'Josefin Sans', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
 }
 .viewMoreCards .card {
   width: 150vh;
@@ -40,29 +40,35 @@
 }
 .viewMoreCards h5 {
   color: white;
-  font-size:5vh;
+  font-size: 5vh;
 }
 .viewMoreCards p {
-  font-size:2.8vh;
-  padding-left:3vh;
-  padding-right:3vh;
-  padding-top:3vh;
+  font-size: 2.8vh;
+  padding-left: 3vh;
+  padding-right: 3vh;
+  padding-top: 3vh;
 }
-.viewMoreCards .iconsDiv{
-	display:flex;
-	justify-content:center;
-	margin-top:3vh;
-	margin-bottom:6vh;
-	flex-wrap: wrap;
+.viewMoreCards .iconsDiv {
+  display: flex;
+  justify-content: center;
+  margin-top: 3vh;
+  margin-bottom: 6vh;
+  flex-wrap: wrap;
 }
-.viewMoreCards .iconsDiv img{
-	height:17vh;
+.viewMoreCards .iconsDiv img {
+  height: 17vh;
+}
+#customtkintericon {
+  height: 10vh;
+}
+#mongodbicon {
+  margin-top: -1vh;
 }
 /* Flowchart */
 .flowchart {
   background-color: white;
-	text-align: center;
-	padding-top:11.5vh;
+  text-align: center;
+  padding-top: 11.5vh;
 }
 .flowchart video {
   height: 94vh;
@@ -90,63 +96,65 @@
   padding-left: 6vh;
   padding-right: 11.5vh;
 }
-.whiteHalf button{
-	font-family:monospace;
-  font-size:3vh;
+.whiteHalf button {
+  font-family: monospace;
+  font-size: 3vh;
 }
-.whiteHalf div{
-  font-family:monospace;
-  font-size:2.5vh;
+.whiteHalf div {
+  font-family: monospace;
+  font-size: 2.5vh;
 }
 .accordion {
   padding-left: 2.9vh;
   padding-right: 2.9vh;
 }
 
-.furtherEvasion{
-	background-color:#15151d;
-	color:white;
-	padding: 17vh 37vh 17vh 37vh;
+.furtherEvasion {
+  background-color: #15151d;
+  color: white;
+  padding: 17vh 37vh 17vh 37vh;
 }
-.furtherEvasion h1{
-	display:block;
-	text-align:center;
-	margin-bottom: 6vh;
+.furtherEvasion h1 {
+  display: block;
+  text-align: center;
+  margin-bottom: 6vh;
 }
-.furtherEvasion div{
+.furtherEvasion div {
   text-align: justify;
   text-justify: inter-word;
 }
-.furtherEvasion p{
-	font-size: 3vh;
+.furtherEvasion p {
+  font-size: 2.7vh;
 }
-.furtherEvasion h2{
-	display:block;
-	text-align:center;
-	margin-top: 14vh;
-	margin-bottom: 6vh;
+.furtherEvasion h2 {
+  display: block;
+  text-align: center;
+  margin-top: 14vh;
+  margin-bottom: 6vh;
 }
-.furtherEvasion td{
-	font-size: 3vh;
+.furtherEvasion td {
+  font-size: 2.7vh;
 }
-.furtherEvasion table{
-	color:white;
+.furtherEvasion table {
+  color: white;
 }
 
 /* Section: How do the evasion techniques work */
 .howEvasionTechWorks {
-	margin-top: 20vh;
+  margin-top: 20vh;
   padding-bottom: 28.5vh;
 }
 .howEvasionTechWorks div {
-  padding-left: 15vh;
-  padding-right: 15vh;
+  padding-left: 7vw;
+  padding-right: 7vw;
 }
 .howEvasionTechWorks h1 {
   text-align: center;
   margin-bottom: 11.5vh;
+  padding-left: 3vh;
+  padding-right: 3vh;
 }
-.howEvasionTechWorks h2{
+.howEvasionTechWorks h2 {
   text-align: center;
   margin-bottom: 3vh;
 }
@@ -154,4 +162,5 @@
   text-align: justify;
   text-justify: inter-word;
   margin-bottom: 11.5vh;
+  font-size: 2.7vh;
 }
