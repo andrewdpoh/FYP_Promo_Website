@@ -124,7 +124,7 @@
               alt="Card image cap"
             />
             <div class="card-body">
-              <h5 class="card-title">Handler</h5>
+              <h5 class="card-title">Client</h5>
               <p class="card-text">
                 A graphical user interface which allows you to interact with the
                 teamserver
@@ -158,7 +158,7 @@
             <div class="card-body">
               <h5 class="card-title">Teamserver</h5>
               <p class="card-text">
-                Processes commands from the handler and sends instructions to
+                Processes commands from the client and sends instructions to
                 the agent
               </p>
               <button
@@ -212,7 +212,7 @@
       <div class="viewMoreCards">
         <div class="col d-flex">
           <div class="collapse mx-auto" id="handlerViewMore">
-            <h5 class="card-title">Handler</h5>
+            <h5 class="card-title">Client</h5>
             <div class="card card-body">
               <p>
                 The interface which you use to send instructions to the
@@ -220,9 +220,9 @@
                 users to manage Agents, Users and Exploits. This is where users
                 can add their own exploits to Bamboo. It also contains a
                 terminal for the user to type commands, as well as a Team Chat
-                function which allows you to talk with your other handlers.
+                function which allows you to talk with your other users.
                 <br /><br />
-                The Handler was designed in Python using CustomTkinter.
+                The Client was designed in Python using CustomTkinter.
               </p>
               <div class="iconsDiv">
                 <img src="../images/python.png" alt="Python icon" />
@@ -236,8 +236,8 @@
             <h5 class="card-title">Teamserver</h5>
             <div class="card card-body">
               <p>
-                The controller that facilitates communication between Handler
-                and Agent. It receives instructions from the Handler, processes
+                The controller that facilitates communication between Client
+                and Agent. It receives instructions from the Client, processes
                 them and delivers the necessary information to the Agent. The
                 server uses HTTPS for majority of its communications, with some
                 exceptions of WebSocket communication.
@@ -283,7 +283,7 @@
 
     <!-- Flowchart Video -->
     <div class="flowchart container-fluid">
-      <h3>Example interaction between Handler, Teamserver and Agent</h3>
+      <h3>Example interaction between Client, Teamserver and Agent</h3>
       <video autoplay loop muted>
         <source src="../images/flowchart.mp4" type="video/mp4" />
       </video>
